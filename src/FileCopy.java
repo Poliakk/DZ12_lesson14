@@ -13,8 +13,10 @@ public class FileCopy {
         ){
             int i;
             while ((i=fileInputStream.read())!=-1){
-                fileOutputStream.write((char) i);
+                fileOutputStream.write(i);
             }
+            fileOutputStream.close();
+            fileInputStream.close();
             System.out.println("DONE");
         }catch (IOException exception){
             exception.printStackTrace();
