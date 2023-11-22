@@ -8,9 +8,8 @@ import java.io.IOException;
 
 public class FileCopy {
     public static void main(String[] args) {
-        try(FileInputStream fileInputStream = new FileInputStream("Picture.png");
-            FileOutputStream fileOutputStream = new FileOutputStream("New_pic.png")
-        ){
+        try{FileInputStream fileInputStream = new FileInputStream("Picture.png");
+            FileOutputStream fileOutputStream = new FileOutputStream("New_pic.png");
             int i;
             while ((i=fileInputStream.read())!=-1){
                 fileOutputStream.write(i);
